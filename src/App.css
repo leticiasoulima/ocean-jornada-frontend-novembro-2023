@@ -5,6 +5,13 @@
   text-align: center;
   box-shadow: 0.25rem 0.25rem black;
   background: #f8f8f8;
+  display: inline-block;
+}
+
+
+.card:hover {
+  box-shadow: 0.25rem 0.25rem black;
+  translate: -0.25rem -0.25rem;
 }
 
 .card > h2 {
@@ -13,4 +20,9 @@
 
 .card > img {
   border-radius: 1rem;
+}
+
+.card:hover > img {
+  translate: -0.25rem -0.25rem;
+  box-shadow: 0.25rem 0.25rem #fea6ca
 }
