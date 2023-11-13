@@ -6,6 +6,7 @@
   box-shadow: 0.25rem 0.25rem black;
   background: #f8f8f8;
   display: inline-block;
+  cursor: pointer 
 }
 
 
@@ -16,6 +17,7 @@
 
 .card > h2 {
   font-family: Inter, Verdana, Geneva, Tahoma, sans-serif;
+  border-left: 0.5rem solid #88dacf;
 }
 
 .card > img {
