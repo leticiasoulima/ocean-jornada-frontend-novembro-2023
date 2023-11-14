@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import './App.css'
 import Card from './components/Card/Card';
 
@@ -19,11 +20,30 @@ function App() {
     imageUrl: "https://rickandmortyapi.com/api/character/avatar/3.jpeg"
   }
 
-  const items = [item1, item2, item3]
+  //const items = [item1, item2, item3]
+
+  //useState
+  const [items, setItems] = useState([])
+
+  async function carregarDadosApi() {
+    const apiUrl = "https://rickandmortyapi.com/api/character/"
+  
+    const response = await fetch(apiUrl)
+
+    const body = await response.json()
+    console.log(body);
+
+    setItems(body.results)
+  }
+  
+  useEffect(function () {
+  carregarDadosApi()
+  }, [])
+
 
   return (
     <>
-      <div className="cards">
+        <div className="cards">
         {items.map(function (element) {
           return <Card item={element} />
         })}
